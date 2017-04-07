@@ -21,3 +21,16 @@ Para cada repositório deverá ser possível escrever uma recomendação, e quan
 - Frontend Responsivo
 - ES6
 - Boa cobertura de testes
+
+## Processo de Submissão
+
+O candidato deverá construir a solução e enviar um pull request para este repositório.
+
+O processo de Pull Request funciona da seguinte maneira:
+- Você deve fazer um fork desse repositório (não clonar)
+- Construir seu projeto nesse fork.
+- Fazer commit das alterações para o SEU fork.
+- Pela interface do Github, enviar um Pull Request.
+
+ATENÇÃO
+Não se deve tentar fazer o PUSH diretamente para ESTE repositório!
