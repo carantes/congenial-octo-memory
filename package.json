@@ -1,0 +1,50 @@
+{
+  "name": "desafio-digital",
+  "version": "1.0.0",
+  "description": "![gitapp](https://cloud.githubusercontent.com/assets/1878740/24781368/79093566-1b15-11e7-9654-2eb663d27ae1.png)",
+  "main": "app.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "NODE_ENV=development ./node_modules/mocha/bin/mocha -u bdd ./tests --disable-logs -c --reporter spec",
+    "lint": "eslint .",
+    "start": "nodemon --use-strict app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carantes/desafio-digital.git"
+  },
+  "keywords": [],
+  "author": "Carlos Arantes <carlos.arantes@oi.net.br>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carantes/desafio-digital/issues"
+  },
+  "homepage": "https://github.com/carantes/desafio-digital#readme",
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "body-parser": "^1.17.1",
+    "compression": "^1.6.2",
+    "cors": "^2.8.3",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.2",
+    "github": "^9.2.0",
+    "helmet": "^3.5.0",
+    "https-proxy-agent": "^1.0.0",
+    "mongoose": "^4.9.6",
+    "request": "^2.81.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.19.0",
+    "mocha": "^3.3.0",
+    "nodemon": "^1.11.0",
+    "pre-commit": "^1.2.2",
+    "supertest": "^3.0.0"
+  },
+  "pre-commit": [
+    "test",
+    "lint"
+  ]
+}
