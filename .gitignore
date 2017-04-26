@@ -9,3 +9,4 @@ coverage
 typings
 .env
 .eslintrc.js
+assets/dist

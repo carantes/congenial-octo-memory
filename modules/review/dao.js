@@ -5,9 +5,10 @@ class ReviewDAO{
     this.model = require('./model');
   }
 
-  findByUsername(username, cb){
+  findByUsernameAndRepo(username, repo, cb){
     let criteria = {
-      username: username
+      username,
+      repo
     }
 
     this.model.findOne(criteria, cb);
@@ -16,7 +17,8 @@ class ReviewDAO{
   insertOrUpdate(data, cb){
     
     let criteria = {
-      username: data.username
+      username: data.username,
+      repo: data.repo
     }
 
     this.model.findOneAndUpdate(criteria, data, {upsert:true, new: true}, cb);

@@ -5,18 +5,24 @@ class Review {
 
     consultar (req, res, next) {
         var user = req.params.username
+        var repo = req.params.repo
 
-        if(!user){
+        if(!user || !repo){
             return next(new Error('campos obrigatorios não preenchidos'));
         }
 
-        this.dao.findByUsername(user, (err, data) => {
+        this.dao.findByUsernameAndRepo(user, repo, (err, data) => {
 
-            if (err) {
-                return res.status(404).json({message: 'falha ao buscar os reviews'})
+            if (err || !data) {
+                return res.status(404).json({message: 'review não encontrado'})
             }
 
-            res.status(200).json(data)
+            var {review, stars} = data
+
+            res.status(200).json({
+                review,
+                stars
+            })
         })
     }
 

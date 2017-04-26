@@ -4,11 +4,8 @@ const modules = require('../modules')
 
 // Headers
 
-// Static files
-router.use('/', express.static(__dirname + '/../public'));
-
 // APIs
-router.use('/api', modules);
+router.use('/', modules);
 
 // Not found
 router.use(function (req, res, next) {  
